@@ -25,6 +25,7 @@ function enlargeImage(img) {
   let computerScoreText = document.getElementById("computerScoreText");
   let roundWinner = document.getElementById("winnerText");
   let overallWinner = document.getElementById("winnerText");
+  const resetButton = document.getElementById("restartButton");
 
 
   // Event listeners
@@ -131,6 +132,8 @@ function enlargeImage(img) {
         WinnerText.textContent = "You lose the game!"
       }
 
+      showReset();
+      return;
 
 
   }
@@ -145,10 +148,29 @@ function enlargeImage(img) {
       scissorsButton.removeEventListener("click", playRound);
     }
     
-      console.log(rockButton);
-      console.log(paperButton);
-      console.log(scissorsButton);
+    function showReset(){
+        resetButton.style.opacity = "100%";
+        resetButton.addEventListener("click", () => resetGame());
+        return;
+    }
     
-  
+    function resetGame(){
+
+      playerScoreText.textContent = "0";
+      computerScoreText.textContent = "0";
+      roundText.textContent = "0";
+      roundsPlayed = 0;
+      playerScore = 0;
+      computerScore = 0;
+      WinnerText.textContent = "";
+      resetButton.style.opacity = "0%";
+      document.getElementById("playerChoice").innerHTML="";
+      document.getElementById("computerChoice").innerHTML="";
+      rockButton.disabled = false;
+      paperButton.disabled = false;
+      scissorsButton.disabled = false;
+
+      return;
+    }
 
   
