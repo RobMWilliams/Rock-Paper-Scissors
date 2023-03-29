@@ -6,34 +6,112 @@
 }
 
 h1{
-    font-size: 60px;
-}
-
-h2{
     font-size: 40px;
 }
 
+h2{
+    font-size: 20px;
+}
+
 h3{
-    font-size: 30px;
+    font-size: 15px;
 }
 
-.container{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.header{
-    margin-bottom: -40px;
-    text-align: center;
-}
 
 .weapons{
     display: flex;
     gap: 50px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-side{
+    margin-inline: 50px;
+    display: flex;
+    justify-content: space-around;
+
+}
+.right-side-text{
+    display: flex;
+    flex-direction: row;
+}
+
+.game {
+    display: flex;
+    justify-content: space-around;
+}
+
+.round, .score{
+    margin-left: 10px;
 }
 
 .weapImg{
     height: 200px;
     width: auto;
+}
+
+.chosenWeapons {
+
+    height: 100px;
+    width: auto;
+}
+
+.resultsContainer{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.resultsContainer h3{
+    align-items: start;
+    width: auto;
+}
+
+.player{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.computer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.roundOutcome{
+    width: 300px;
+    text-align: center;
+}
+
+.outcome{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-inline: 50px;
+}
+.playerWeaponImg{
+    margin-top: 20px;
+}
+
+button{
+    border: none;
+}
+
+button[disabled]{
+    opacity: 0.5;
+}
+
+.resultsText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.resultsText h3{
+    font-size: 30px;
 }
